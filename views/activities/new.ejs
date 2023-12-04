@@ -1,0 +1,77 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+
+    <div class="row">
+        <div class="col-8 offset-2 mt-3">
+
+    <h3>Add new activity: </h3>
+    <form method="POST" action="/activities" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="activity[title]"  placeholder="Yoga" class = "form-control" required>
+            <div class="valid-feedback">Title lookes good!</div>
+            <div class="invalid-feedback">Title required</div>
+            <br>
+            
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="activity[description]"  placeholder="enter description" class = "form-control" required> </textarea>
+            <div class="valid-feedback">Seems interesting!</div>
+            <div class="invalid-feedback">Description helps to know about it!</div>
+            <br>
+        </div>
+        
+
+             <div>
+            <label for="image" class="form-label">Upload Listing Image</label>
+            <input type="file"  name="activity[image]"  class = "form-control" required >
+            <div class="invalid-feedback">Image required!</div>
+          
+            
+            <br>
+             </div>
+
+
+             <div class="row">
+             <div class="col-md-2">
+                <label for="age" class="form-label">Age Required</label>
+                <input  name="activity[ageCriteria]" type="number"  placeholder="6+" class = "form-control" min="6" >
+                <div class="invalid-feedback">Age limit required to adhere safety protocols!</div>
+                <!-- type="number" -->
+            <br>
+            </div>
+            <div class="col-md-2">
+                <label for="time" class="form-label">Time Limit</label>
+                <input  name="activity[time]"  placeholder="60 min" class = "form-control" required >
+                
+                <!-- type="number" -->
+            <br>
+            </div>
+       
+        <div class="col-md-2">
+            <label for="price" class="form-label">Price</label>
+            <input  name="activity[price]"  placeholder="50" class = "form-control" required >
+            <div class="invalid-feedback">Price needed!</div>
+            <!-- type="number" -->
+        <br>
+        </div>
+        
+        <!-- <input type="number" name="listing[price]"  placeholder="enter price">
+        <br> -->
+       
+        
+       
+        <div class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="activity[location]"  placeholder="Florida" class= "form-control" required>
+            <div class="invalid-feedback">Location needed!</div>
+            <br>
+        </div>
+    </div>
+     
+        <button class="btn btn-dark add-btn mb-3">Add</button>
+
+    </form>
+    
+</body>

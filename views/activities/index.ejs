@@ -1,0 +1,147 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <!-- <h5> <b>All Listings </b></h5> -->
+
+  <!-- <form method="GET" action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+
+  <style>
+    #filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter {
+      text-align: center;
+      margin-right: 2rem;
+      margin-top: 1.5rem;
+      opacity: 0.7;
+    }
+    .filter:hover {
+      opacity: 1.2;
+      cursor: pointer;
+    }
+    .filter p {
+      font-size: 0.8rem;
+    }
+
+    .tax-info {
+      display: none;
+    }
+    .tax-toggle {
+      border: 3px solid #2a9d8f;
+      border-radius: 3rem;
+      height: 3rem;
+      padding: 1rem;
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      background-color: rgb(229, 236, 236);
+     
+    }
+  </style>
+
+  <div id="filters">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-leaf"></i></i></div>
+      <p>Peace</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-otter"></i></i></div>
+      <p>Fun</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fish"></i></i></div>
+      <p>Mamals Life</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-ship"></i></i></div>
+      <p>Boating</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-user"></i></i></div>
+      <p>Meditation</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-brands fa-fly"></i></i></div>
+      <p>Air Fun</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-regular fa-moon"></i></div>
+      <p>Night Activity</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-spa"></i></i></div>
+      <p>Spa</p>
+    </div>
+
+
+
+    <div class="filter">
+      <div><i class="fa-solid fa-water"></i></i></div>
+      <p>Water Sites</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-tree"></i></div>
+      <p>Forestic</p>
+    </div>
+     
+
+
+
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Display total after taxes</label
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(let activity of allActivities) { %>
+    <a href="/activities/<%=activity._id%>" class="activity-link">
+      <div class="card col activity-card">
+        <img
+          src="<%= activity.image.url %>"
+          class="card-img-top"
+          alt="activity_image"
+          style="height: 20rem"
+        />
+
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b> <%= activity.title %> <br /> </b>
+            &#8377; <%= activity.price.toLocaleString("en-IN") %>
+            <i class="tax-info"> &nbsp; &nbsp; +18% GST</i>
+          </p>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <script>
+    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click", () => {
+      let taxInfo = document.getElementsByClassName("tax-info");
+      for (info of taxInfo) {
+        if (info.style.display != "inline") {
+          info.style.display = "inline";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    });
+  </script>
+</body>

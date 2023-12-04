@@ -1,0 +1,135 @@
+<style>
+  .search-btn {
+    background-color: #f4984c;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: white;
+    opacity: 0.9;
+    border: 1px solid yellow;
+  border-radius: 25px;
+  }
+  .search-btn i {
+    display: inline;
+    margin-right: 0.3rem;
+    
+  }
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+  }
+  .search-inp:hover {
+    border-radius: 27px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+    border: 1.5px solid #fe424d;
+    
+
+  }
+  .addActivity-btn {
+    border-radius: 25px;
+    background-color: rgb(229, 222, 222);
+    color: white;
+
+    border: 1px solid #f4984c;
+  }
+  
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="/activities"
+      > <i class="fa-solid fa-earth-asia"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/activities">
+          <i class=" Wlogo fa-brands fa-weebly" style=" font-size: 1.7rem;"></i>
+          <i class=" Wlogo fa-brands fa-amilia" ></i>
+          <i class=" Wlogo fa-brands fa-vimeo-v"></i>
+          <i class="Wlogo fa-brands fa-edge-legacy" ></i>
+          <i class="Wlogo fa-brands fa-stripe-s" ></i>
+          
+          <i class="  fa-brands fa-d-and-d" style=" color: whitesmoke ; font-size: 2rem;" ></i>
+          <i class="Wlogo fa-brands fa-weebly" style= "font-size: 1.7rem;"></i>
+          <i class="Wlogo fa-brands fa-opera" ></i>
+          
+          <i class="Wlogo fa-brands fa-nfc-symbol" ></i>
+          <i class="Wlogo fa-solid fa-d" ></i>
+          <i class="Wlogo fa-brands fa-edge-legacy" ></i>
+          <i class="Wlogo fa-solid fa-r" ></i>
+          <i class="Wlogo fa-brands fa-stripe-s"> </i>
+          </i
+        ></a>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex">
+          <input
+            class="form-control me-2 search-inp"
+            type="search"
+            placeholder="Search Activities"
+          />
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link addActivity-btn" href="/activities/new"
+          ><b>List new  </b></a
+        >
+
+        <% if(!currUser) { %>
+        <a class="nav-link" href="/signup"><b>Sign up</b></a>
+        <a class="nav-link" href="/login"><b>Log-in</b></a>
+        <% }%> <% if(currUser) { %>
+        <a class="nav-link" href="/logout">Log-out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- 
+  <i class="fa-solid fa-earth-asia"></i>
+  
+  <i class="fa-solid fa-w"></i>
+<i class="fa-brands fa-amilia"></i>
+<i class="fa-brands fa-vimeo-v"></i>
+<i class="fa-brands fa-edge-legacy"></i>
+<i class="fa-brands fa-stripe-s"></i>
+
+<i class="fa-brands fa-d-and-d"></i>
+<i class="fa-solid fa-w"></i>
+<i class="fa-brands fa-opera"></i>
+
+<i class="fa-brands fa-nfc-symbol"></i>
+<i class="fa-solid fa-d"></i>
+<i class="fa-brands fa-edge-legacy"></i>
+<i class="fa-solid fa-r"></i>
+<i class="fa-brands fa-stripe-s"></i>
+
+
+<i class="fa-brands fa-weebly"></i>-->
+
+
+
+<!-- <i class="fa-solid fa-earth-oceania"></i> -->

@@ -1,0 +1,189 @@
+@keyframes rainbow {
+  0% {
+    color: violet;
+  }
+  20% {
+    color: indigo;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.Wlogo {
+  display: inline-block;
+  animation: rainbow 10s infinite;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+  background-color: #2a9d8f;
+}
+.fa-earth-asia {
+  color: #f4984c;
+  font-size: 3rem;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+.fa-earth-asia:hover {
+  color: #f4984c;
+  font-size: 2.9rem;
+  border: 1px solid yellow;
+  border-radius: 25px;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+/*FOOTER STYLING*/
+.f-info-links {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  /* vertical-align: middle;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  margin-right: 1rem;
+  font-size: 1.2;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Card styling */
+.activity-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text p {
+  font-weight: 400;
+}
+
+.activity-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: whitesmoke;
+}
+
+.delete-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+.add-btn {
+  background-color: #077d19 !important;
+  border: none !important;
+}
+
+/* show-page */
+
+.show-img {
+  height: 30vh;
+  border: 1px solid rgb(115, 164, 255);
+}
+.btns {
+  display: flex;
+}
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map */
+#map {
+  height: 400px;
+  width: 80vph;
+  border-radius: 14px;
+  border: 3px solid rgb(225, 104, 104);
+}
+.addActivity-btn {
+  color: aliceblue;
+}
+
+.fa-location-dot {
+  color: rgb(184, 5, 5);
+  font-size: 1.5rem;
+}
+
+.fa-child-reaching {
+  color: rgb(118, 159, 255);
+  font-size: 1.5rem;
+}
+
+.fa-clock {
+  color: rgb(0, 76, 255);
+  font-size: 1.5rem;
+}
+
+.fa-indian-rupee-sign {
+  color: #077d19;
+  font-size: 1.5rem;
+}
+
+.edit-page-img-viewer {
+  border-radius: 14px;
+  height: 200px;
+}
+
+/* 
+fa-solid fa-indian-rupee-sign"></i> &nbsp;<%= activity.price.toLocaleString("en-IN") %></p>
+      <p> <i class="fa-solid fa-location-dot"></i> &nbsp;&nbsp;<%= activity.location %></p>
+      <p> <i class="fa-solid fa-child-reaching"></i> &nbsp;<%= activity.ageCriteria %>+</p>
+      <p> <i class="fa-regular fa-clock"> */
